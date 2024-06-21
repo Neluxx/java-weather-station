@@ -1,0 +1,32 @@
+### Find aLl Sensor data
+GET http://localhost:8080/api/sensor-data
+
+### Find Sensor data by ID
+GET http://localhost:8080/api/sensor-data/2
+
+### Create new Sensor data
+POST http://localhost:8080/api/sensor-data
+Content-Type: application/json
+
+{
+  "id": 11,
+  "temperature": 21.7,
+  "humidity": 47.5,
+  "pressure": 1023.8,
+  "co2": 513.9
+}
+
+### Update an existing Sensor data
+PUT http://localhost:8080/api/sensor-data/11
+Content-Type: application/json
+
+{
+  "id": 11,
+  "temperature": 24.7,
+  "humidity": 49.5,
+  "pressure": 1021.8,
+  "co2": 613.9
+}
+
+### Delete a Sensor data
+DELETE http://localhost:8080/api/sensor-data/11
