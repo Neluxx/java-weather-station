@@ -1,4 +1,4 @@
-package com.github.neluxx.weather_station.sensor_api;
+package com.github.neluxx.weather_station.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

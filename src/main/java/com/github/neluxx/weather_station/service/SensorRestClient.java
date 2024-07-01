@@ -1,5 +1,6 @@
-package com.github.neluxx.weather_station.sensor_api;
+package com.github.neluxx.weather_station.service;
 
+import com.github.neluxx.weather_station.model.Sensor;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;

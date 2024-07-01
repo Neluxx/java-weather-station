@@ -1,5 +1,8 @@
-package com.github.neluxx.weather_station.sensor_api;
+package com.github.neluxx.weather_station.controller;
 
+import com.github.neluxx.weather_station.exception.SensorDataNotFoundException;
+import com.github.neluxx.weather_station.model.Sensor;
+import com.github.neluxx.weather_station.repository.SensorRepository;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

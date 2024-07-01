@@ -1,4 +1,4 @@
-package com.github.neluxx.weather_station.sensor_api;
+package com.github.neluxx.weather_station.model;
 
 import jakarta.validation.constraints.Positive;
 

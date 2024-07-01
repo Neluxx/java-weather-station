@@ -1,5 +1,6 @@
-package com.github.neluxx.weather_station.sensor_api;
+package com.github.neluxx.weather_station.repository;
 
+import com.github.neluxx.weather_station.model.Sensor;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Repository;
 
@@ -12,24 +13,24 @@ public class SensorRepository {
 
     private List<Sensor> sensorData = new ArrayList<>();
 
-    List<Sensor> findAll() {
+    public List<Sensor> findAll() {
         return sensorData;
     }
 
-    Optional<Sensor> findById(Integer id) {
+    public Optional<Sensor> findById(Integer id) {
         return sensorData.stream().filter(sensor -> sensor.id().equals(id)).findFirst();
     }
 
-    void create(Sensor sensor) {
+    public void create(Sensor sensor) {
         sensorData.add(sensor);
     }
 
-    void update(Sensor sensor, Integer id) {
+    public void update(Sensor sensor, Integer id) {
         Optional<Sensor> existingSensorData = findById(id);
         existingSensorData.ifPresent(value -> sensorData.set(sensorData.indexOf(value), sensor));
     }
 
-    void delete(Integer id) {
+    public void delete(Integer id) {
         sensorData.removeIf(sensor -> sensor.id().equals(id));
     }
 
