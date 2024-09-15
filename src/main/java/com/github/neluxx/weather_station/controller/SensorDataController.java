@@ -1,5 +1,6 @@
 package com.github.neluxx.weather_station.controller;
 
+import com.github.neluxx.weather_station.exception.SensorDataNotFoundException;
 import com.github.neluxx.weather_station.model.SensorData;
 import com.github.neluxx.weather_station.service.SensorDataService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class SensorDataController {
 
     @GetMapping("/{id}")
     public SensorData getSensorDataById(@PathVariable Long id) {
-        return sensorDataService.getSensorDataById(id).orElseThrow();
+        return sensorDataService.getSensorDataById(id).orElseThrow(SensorDataNotFoundException::new);
     }
 
     @PostMapping
